@@ -1,14 +1,12 @@
 import Show from "./Show";
+import Loading from "../Loading";
 
-function Shows({ shows }) {
+function Shows({ shows, loading }) {
   return (
     <div className="shows">
       <h3 className="shows-category">Popular On Netflix</h3>
       <div className="show-cards">
-        {/* {shows.map((show) => (
-          <h1>{show.title}</h1>
-          //   <Show />
-        ))} */}
+        {loading ? <Loading /> : shows.map((show) => <Show show={show} />)}
       </div>
     </div>
   );

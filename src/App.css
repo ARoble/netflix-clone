@@ -66,6 +66,8 @@ ul li{
 }
 .show-info{
   display: flex;
+  background:rgba(0, 0, 0, 0.8);
+  opacity:0.4;
   position: absolute;
   bottom: 0;
   padding:10px;
@@ -140,3 +142,13 @@ ul li{
   color: grey;
 }
 /* Footer CSS */
+
+.spinner{
+ text-align: center;
+ font-size:25px;
+  color:red;
+ margin:auto;animation: mymove 2s infinite;
+}@keyframes mymove {
+  50% {transform: rotate(180deg);}
+  100% {transform: rotate(360deg);}
+}

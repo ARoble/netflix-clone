@@ -7,7 +7,8 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 
 function App() {
-  var [popular, setPopular] = useState({});
+  const [popular, setPopular] = useState([]);
+  const [loading, setLoading] = useState(true);
   useEffect(() => {
     var options = {
       method: "GET",
@@ -33,18 +34,24 @@ function App() {
     axios
       .request(options)
       .then(function (response) {
-        setPopular(response.data.results);
+        let top5 = [];
+        for (let i = 0; i < 6; i++) {
+          top5.push(response.data.results[i]);
+        }
+        console.log(top5);
+        setPopular(top5);
+        setLoading(false);
       })
       .catch(function (error) {
         console.error(error);
       });
-  }, [popular]);
-  console.log(popular);
+  }, [popular, loading]);
+
   return (
     <div>
       <Header />
       <Banner />
-      <Shows shows={popular} />
+      <Shows shows={popular} loading={loading} />
       <Footer />
     </div>
   );

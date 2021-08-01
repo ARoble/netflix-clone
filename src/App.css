@@ -1,38 +1,142 @@
-.App {
-  text-align: center;
+/* General CSS */
+*{
+  box-sizing: border-box;
+  margin:0;
+  padding:0;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+  background:black;
+  color:white;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.flex{
   display: flex;
+}
+.hover:hover{
+  cursor:pointer;
+}
+/* General CSS */
+
+/* Navigation CSS */
+.header{
+  height:70px;
+width:100%;
+background:#141414;
+justify-content:space-between;
+}
+ul{
+ list-style:none;
+}
+ul li{
+  display:inline;
+  padding:0px 9px;
+  font-size:14px
+}
+.nav{
+  justify-content: space-between;
+}
+
+.header img{
+  height:70px
+}
+
+.nav-icons{
+  font-size:25px;
+  margin:0px 13px
+}
+/* Navigation CSS */
+
+/* Shows CSS */
+.shows{
+  width:93%;
+  margin:auto;
+  margin-top:20px;
+  margin-bottom:20px;
+}
+.show-cards{
+  display:flex;
+  flex-wrap: wrap;
+}
+.show-card{
+  position:relative;
+  margin:5px 5px;
+  transition: transform .2s;
+}
+.shows-category{
+  padding-bottom:10px
+}
+.show-info{
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  padding:10px;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  opacity: 0;
 }
+.show-card:hover .show-info{
+  opacity: 1;
+}
+.btn-play{
+  color:red; 
+  font-size:15px
+}
+.match{
+  color:#45d600;
+  font-weight:600
+}
+.bio{
+  font-size:11px
+}
+.show-card:hover {
+  -ms-transform: scale(1.04); /* IE 9 */
+  -webkit-transform: scale(1.04); /* Safari 3-8 */
+  transform: scale(1.2); 
+  z-index: 1;
+  cursor: pointer;
+}
+.show-card:hover + .show-info {
+  display: none;
+}
+/* Shows CSS */
 
-.App-link {
-  color: #61dafb;
+/* Banner CSS */
+.banner{
+  width:100%;
 }
+.feature-info{
+  padding:20px 40px;
+  width:50%
+}
+.banner-title{
+  width:70%
+}
+.banner-desc{
+  padding-top:20px
+}
+.feature-image{
+  width:50%
+}
+.feature-image img{
+  width:100%;
+}
+.btn-banner{
+  padding:7px 17px;
+  border:none;
+  border-radius:5px;
+  background:grey;
+  color:white;
+  margin-right:10px;
+  margin-top:20px
+}
+.btn-icon{
+  margin-right:5px
+}
+/* Banner CSS */
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Footer CSS */
+.footer{
+  background:#141414;
+  text-align: center;
+  padding:15px;
+  color: grey;
 }
+/* Footer CSS */

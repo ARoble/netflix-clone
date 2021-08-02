@@ -1,5 +1,6 @@
 import Show from "./Show";
 import Loading from "../Loading";
+import Category from "./Category";
 
 function Shows({ shows, loading }) {
   return (

@@ -1,6 +1,8 @@
 import { FaSearch, FaBell } from "react-icons/fa";
+import { useState } from "react";
+function Header({ change }) {
+  const [active, setActive] = useState(false);
 
-function Header() {
   return (
     <div className="header flex">
       <div className="flex" style={{ alignItems: "center" }}>
@@ -23,8 +25,22 @@ function Header() {
       </div>
 
       <div className="flex" style={{ alignItems: "center" }}>
+        {active ? (
+          <input
+            type="text"
+            className="searchbox"
+            placeholder="Search for a show...."
+            onChange={(e) => change(e.target.value)}
+          />
+        ) : (
+          ""
+        )}
+
         <div>
-          <FaSearch className="nav-icons hover" />
+          <FaSearch
+            className="nav-icons hover"
+            onClick={() => (active ? setActive(false) : setActive(true))}
+          />
           <FaBell className="nav-icons hover" />
         </div>
         <img src="./profile.png" alt="user" className="profile hover" />

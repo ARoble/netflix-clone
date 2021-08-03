@@ -9,6 +9,7 @@ import { useState, useEffect } from "react";
 
 function App() {
   const [popular, setPopular] = useState([]);
+  const [random, setRandom] = useState([]);
   const [loading, setLoading] = useState(true);
   const [search, setSearch] = useState("");
 
@@ -32,6 +33,13 @@ function App() {
           top5.push(response.data[i]);
         }
 
+        let random5 = [];
+
+        for (let i = 0; i < 6; i++) {
+          let random = Math.random(Math.Floor * 200);
+          random5.push(response.data[random]);
+        }
+        setRandom(random5);
         setPopular(top5);
         setLoading(false);
       })
@@ -47,6 +55,7 @@ function App() {
         <>
           <Banner />
           <Shows shows={popular} loading={loading} />
+          <Shows shows={random} loading={loading} />
         </>
       ) : (
         <Search query={search} />

@@ -22,12 +22,21 @@ function Search({ query }) {
 
   return (
     <div className="shows">
-      <h3 className="shows-category">You have searched for: {query}</h3>
-      <div className="show-cards">
-        {shows.map((show) => (
-          <Show show={show.show} />
-        ))}
-      </div>
+      {shows.length > 0 ? (
+        <>
+          <h3 className="shows-category">You have searched for: {query}</h3>
+          <small>{shows.length} shows</small>
+          <div className="show-cards">
+            {shows.map((show) => (
+              <Show show={show.show} />
+            ))}
+          </div>
+        </>
+      ) : (
+        <h3 className="shows-category">
+          We have found no searchs with: {query}
+        </h3>
+      )}
     </div>
   );
 }

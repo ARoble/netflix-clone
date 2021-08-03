@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import Show from "./Shows/Show";
-import Test from "./test";
 
 function Search({ query }) {
   const [shows, setShows] = useState([]);

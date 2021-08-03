@@ -3,6 +3,7 @@ import Header from "./Header/Header";
 import Shows from "./Shows/Shows";
 import Banner from "./Banner/Banner";
 import Footer from "./Footer/Footer";
+import Search from "./search";
 import axios from "axios";
 import { useState, useEffect } from "react";
 
@@ -37,15 +38,20 @@ function App() {
       .catch(function (error) {
         console.error(error);
       });
-  }, []);
+  }, [search]);
 
   return (
     <div>
       <Header change={changeSearch} />
-      <Banner />
-      <h1>you have searched: {search}</h1>
-      {search === "" ? "empty" : "full"}
-      <Shows shows={popular} loading={loading} />
+      {search === "" ? (
+        <>
+          <Banner />
+          <Shows shows={popular} loading={loading} />
+        </>
+      ) : (
+        <Search query={search} />
+      )}
+
       <Footer />
     </div>
   );

@@ -2,7 +2,16 @@ import { FaPlay } from "react-icons/fa";
 function Show({ show }) {
   return (
     <div className="show-card">
-      <img src={show.image.medium} alt="Prison Break" />
+      {show.image === null ? (
+        <img
+          src="nocover.jpg"
+          alt="No Cover"
+          style={{ height: "295px", width: "210px" }}
+        />
+      ) : (
+        <img src={show.image.medium} alt="Show Cover" />
+      )}
+
       <div className="show-info">
         <FaPlay className="btn-play" />
         <span>{show.name}</span>

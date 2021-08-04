@@ -31,7 +31,7 @@ function App() {
       .then(function (response) {
         //console.log(response.data[0]);
         let top5 = [];
-        for (let i = 0; i < 6; i++) {
+        for (let i = 0; i < 8; i++) {
           top5.push(response.data[i]);
         }
 

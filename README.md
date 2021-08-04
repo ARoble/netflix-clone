@@ -1,9 +1,15 @@
 # NETFLIX CLONE 📺
+
+## Main page
+![alt text](main.PNG "Title")
+## Search page
+![alt text](search.PNG "Title")
+## Show details page
 ![alt text](netflix.PNG "Title")
 
 ## Features 🔥
-📺 Navbar search
-📺 Click show for more details
+📺 Navbar search \
+📺 Click show for more details \
 📺 Random movies for movies you might like section
 
 

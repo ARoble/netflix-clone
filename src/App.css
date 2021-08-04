@@ -221,6 +221,18 @@ padding:0px 30px
 .btn-details:hover{
   background:grey
 }
+.cast{
+  flex-wrap: wrap;
+}
+.cast-card{
+  width:14%;
+  text-align: center;
+  margin:5px 3px
+}
+.cast-card img{
+  width:100%;
+  height: 128px
+}
 /* Show Details Css */
 /* Footer CSS */
 .footer{

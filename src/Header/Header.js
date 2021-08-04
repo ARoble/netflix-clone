@@ -9,7 +9,7 @@ function Header({ change }) {
     <div className="header flex">
       <div className="flex" style={{ alignItems: "center" }}>
         <img
-          src="./netflix-logo.png"
+          src="/netflix-logo.png"
           alt="logo"
           className="logo"
           style={{ height: "70px" }}
@@ -47,7 +47,7 @@ function Header({ change }) {
           />
           <FaBell className="nav-icons hover" />
         </div>
-        <img src="./profile.png" alt="user" className="profile hover" />
+        <img src="/profile.png" alt="user" className="profile hover" />
       </div>
     </div>
   );

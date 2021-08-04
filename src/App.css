@@ -155,6 +155,46 @@ ul li{
 /* Search CSS */
 
 
+/* Show Details Css */
+.show-details{
+  width:93%;
+  margin:auto;
+  margin-top:20px;
+  margin-bottom:20px;
+}
+.show-details span{
+  color:grey;
+}
+.details-info{
+width:60%;
+padding:0px 30px
+}
+
+.details-image{
+  width:40%;
+}
+.details-image img{
+  width:100%;
+  padding:0px 20px;
+}
+.details-heading{
+  justify-content: space-between;
+}
+.details-heading, .details-heading div{
+  align-items:center;
+}
+.star{
+  color:gold;
+  font-size: 23px;
+  margin-right: 7px;
+}
+.show-information{
+  margin-top:25px
+}
+.more-info{
+  margin-top:25px
+}
+/* Show Details Css */
 /* Footer CSS */
 .footer{
   background:#141414;

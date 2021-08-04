@@ -4,6 +4,7 @@ import Shows from "./Shows/Shows";
 import Banner from "./Banner/Banner";
 import Footer from "./Footer/Footer";
 import Search from "./search";
+import Detail from "./Shows/Detail";
 import axios from "axios";
 import { useState, useEffect } from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
@@ -73,8 +74,8 @@ function App() {
               <Search query={search} />
             )}
           </Route>
-          <Route path="/show">
-            <h1>You want to see a show</h1>
+          <Route path="/show/:id">
+            <Detail />
           </Route>
         </Switch>
         <Footer />

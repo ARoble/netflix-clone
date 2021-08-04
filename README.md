@@ -1,5 +1,7 @@
 # NETFLIX CLONE 📺
 
+Done a quick clone of Netflix fetched the data from an API and jsut worked with that. It was a nice challenge still could improve and add more features to it and hopefully i will do 😊
+
 ## Main page
 ![alt text](main.PNG "Title")
 ## Search page

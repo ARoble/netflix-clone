@@ -1,4 +1,5 @@
 import "./App.css";
+
 import Header from "./Header/Header";
 import Shows from "./Shows/Shows";
 import Banner from "./Banner/Banner";
@@ -54,16 +55,19 @@ function App() {
     <div>
       <Router>
         <Header change={changeSearch} />
+
         <Switch>
           <Route exact path="/">
             {search === "" ? (
               <>
                 <Banner />
+
                 <Shows
                   shows={popular}
                   loading={loading}
                   title="Popular on Netflix"
                 />
+
                 <Shows
                   shows={random}
                   loading={loading}

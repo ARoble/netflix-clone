@@ -6,6 +6,7 @@ import {
   Route,
   useParams,
   Link,
+  Redirect,
 } from "react-router-dom";
 import axios from "axios";
 import Loading from "./../Loading";
@@ -28,7 +29,8 @@ function Detail() {
         setLoading(false);
       })
       .catch(function (error) {
-        console.error(error);
+        console.log(show);
+        console.error(error.message);
       });
   }, [show]);
 
@@ -44,7 +46,7 @@ function Detail() {
           <div className="details-info">
             <div className="flex details-heading">
               <div className="flex">
-                <button className="btn-play hover">
+                <button className="btn-play-detail hover">
                   <FaPlay className="play-icon" />
                 </button>
                 <div>
@@ -64,7 +66,7 @@ function Detail() {
               Add to list
             </button>
             <div className="show-information">
-              <div>{show.summary.replace("", "")}</div>
+              <div>{show.summary}</div>
               <div className="more-info">
                 <span>Network:</span> <small>{show.network.name} </small>
                 <br />

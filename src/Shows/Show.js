@@ -21,7 +21,7 @@ function Show({ show }) {
           <span>
             <span className="match">{show.rating.average} </span> {show.status}
           </span>
-          <span className="bio">{show.summary}</span>
+          <span className="bio">{show.summary.substring(0, 170)}...</span>
         </div>
       </Link>
     </div>

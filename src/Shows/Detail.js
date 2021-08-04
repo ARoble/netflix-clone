@@ -1,6 +1,12 @@
-import { FaStar } from "react-icons/fa";
+import { FaStar, FaPlay, FaPlus } from "react-icons/fa";
 import { useEffect, useState } from "react";
-import { BrowserRouter as Router, useParams } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  useParams,
+  Link,
+} from "react-router-dom";
 import axios from "axios";
 import Loading from "./../Loading";
 
@@ -37,28 +43,42 @@ function Detail() {
           </div>
           <div className="details-info">
             <div className="flex details-heading">
-              <div>
-                <h1>{show.name}</h1>
+              <div className="flex">
+                <button className="btn-play hover">
+                  <FaPlay className="play-icon" />
+                </button>
+                <div>
+                  <h1>{show.name}</h1>
+                  <span>
+                    {show.runtime} Min | {show.status} | {show.language}
+                  </span>
+                </div>
               </div>
               <div className="flex">
                 <FaStar className="star" />
                 <h2>{show.rating.average}</h2>
               </div>
             </div>
-            <div className="flex">
-              <span>
-                2018 | {show.status} | {show.language}
-              </span>
-            </div>
+            <button className="btn-banner hover">
+              <FaPlus className="btn-icon" />
+              Add to list
+            </button>
             <div className="show-information">
               <div>{show.summary}</div>
               <div className="more-info">
+                <span>Network:</span> <small>{show.network.name} </small>
+                <br />
                 <span>Genre:</span> <small>{show.genres.join(" | ")} </small>
                 <br />
                 <span>Schedule:</span>{" "}
                 <small>{show.schedule.days.join(", ")} </small> at{" "}
                 <small>{show.schedule.time} </small>
               </div>
+            </div>
+            <div>
+              <button className="btn-details hover">Offical Site</button>
+
+              <button className="btn-details hover">View Episodes</button>
             </div>
           </div>
         </>

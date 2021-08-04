@@ -171,7 +171,22 @@ padding:0px 30px
 }
 
 .details-image{
+  padding:20px;
   width:40%;
+}
+.btn-play{
+  padding:15px;
+  border-radius: 0px;
+  border:none;
+  background-color:#e50914;
+  color:white;
+  margin-right:10px;
+}
+.btn-play:hover{
+  box-shadow: 0 4px 8px 0 rgba(255, 0, 0, 0.5), 0 12px 40px 0 rgba(255, 0, 0, 0.5);
+}
+.play-icon{
+  font-size: 20px;
 }
 .details-image img{
   width:100%;
@@ -193,6 +208,18 @@ padding:0px 30px
 }
 .more-info{
   margin-top:25px
+}
+.btn-details{
+  padding:13px 17px;
+  border:none;
+  border-radius:5px;
+  background:#e50914;
+  color:white;
+  margin-right:10px;
+  margin-top:20px
+}
+.btn-details:hover{
+  background:grey
 }
 /* Show Details Css */
 /* Footer CSS */

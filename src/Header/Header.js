@@ -8,13 +8,14 @@ function Header({ change }) {
   return (
     <div className="header flex">
       <div className="flex" style={{ alignItems: "center" }}>
-        <img
-          src="/netflix-logo.png"
-          alt="logo"
-          className="logo"
-          style={{ height: "70px" }}
-        />
-
+        <Link to="/" className="link">
+          <img
+            src="/netflix-logo.png"
+            alt="logo"
+            className="logo"
+            style={{ height: "70px" }}
+          />
+        </Link>
         <div>
           <ul>
             <Link to="/" className="link">

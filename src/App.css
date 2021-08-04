@@ -14,6 +14,10 @@ body{
 .hover:hover{
   cursor:pointer;
 }
+.link{
+  text-decoration: none;
+  color:inherit;
+}
 /* General CSS */
 
 /* Navigation CSS */
@@ -157,6 +161,7 @@ ul li{
   text-align: center;
   padding:15px;
   color: grey;
+
 }
 /* Footer CSS */
 

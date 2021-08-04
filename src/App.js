@@ -6,7 +6,7 @@ import Footer from "./Footer/Footer";
 import Search from "./search";
 import axios from "axios";
 import { useState, useEffect } from "react";
-
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 function App() {
   const [popular, setPopular] = useState([]);
   const [random, setRandom] = useState([]);
@@ -36,9 +36,10 @@ function App() {
         let random5 = [];
 
         for (let i = 0; i < 6; i++) {
-          let random = Math.random(Math.Floor * 200);
+          let random = Math.floor(Math.random() * 200);
           random5.push(response.data[random]);
         }
+
         setRandom(random5);
         setPopular(top5);
         setLoading(false);
@@ -50,18 +51,34 @@ function App() {
 
   return (
     <div>
-      <Header change={changeSearch} />
-      {search === "" ? (
-        <>
-          <Banner />
-          <Shows shows={popular} loading={loading} />
-          <Shows shows={random} loading={loading} />
-        </>
-      ) : (
-        <Search query={search} />
-      )}
-
-      <Footer />
+      <Router>
+        <Header change={changeSearch} />
+        <Switch>
+          <Route exact path="/">
+            {search === "" ? (
+              <>
+                <Banner />
+                <Shows
+                  shows={popular}
+                  loading={loading}
+                  title="Popular on Netflix"
+                />
+                <Shows
+                  shows={random}
+                  loading={loading}
+                  title="Some shows you might like"
+                />
+              </>
+            ) : (
+              <Search query={search} />
+            )}
+          </Route>
+          <Route path="/show">
+            <h1>You want to see a show</h1>
+          </Route>
+        </Switch>
+        <Footer />
+      </Router>
     </div>
   );
 }

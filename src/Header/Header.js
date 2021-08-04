@@ -1,5 +1,7 @@
 import { FaSearch, FaBell } from "react-icons/fa";
 import { useState } from "react";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+
 function Header({ change }) {
   const [active, setActive] = useState(false);
 
@@ -15,7 +17,9 @@ function Header({ change }) {
 
         <div>
           <ul>
-            <li>Home</li>
+            <Link to="/" className="link">
+              <li>Home</li>
+            </Link>
             <li>Tv Shows</li>
             <li>Movies</li>
             <li>Recently Added</li>
